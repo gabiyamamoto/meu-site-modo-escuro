@@ -35,7 +35,7 @@ header img {
 
 .texto-pequeno {
     font-size: 1.2rem;
-    color:rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
 }
 
 main {
@@ -60,7 +60,9 @@ body.escuro header {
     background-color: rgb(84, 104, 171);
 }
 
-body.escuro #sobre, body.escuro #competencias, body.escuro #contato {
+body.escuro #sobre,
+body.escuro #competencias,
+body.escuro #contato {
     background-color: #1e1e1e;
     border: 1px solid #333;
 }
@@ -154,8 +156,10 @@ ul {
     list-style: none;
     padding: 0.9rem;
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
     padding-bottom: 0.3rem;
+    justify-content: center;
 }
 
 li {
@@ -163,7 +167,7 @@ li {
     padding: 0.7rem;
     border-left: 0.25rem solid rgb(105, 132, 221);
     font-size: 1rem;
-    min-width: 14.5rem;
+    min-width: 13.5rem;
 }
 
 li:hover {
@@ -216,6 +220,23 @@ footer {
     text-align: center;
 }
 
+@media (min-width: 1025px) and (max-width: 1440px) {
+    li {
+        width: calc(33.33% - 1rem - 0.5rem); 
+        min-width: auto;
+    }
+}
+
+@media (min-width: 1441px) {
+    #competencias {
+        max-width: 1200px; 
+    }
+    li {
+        width: calc(25% - 1rem - 0.5rem); 
+        min-width: auto;
+    }
+}
+
 @media (max-width: 1024px) {
     main {
         padding: 2rem 1rem;
@@ -240,6 +261,7 @@ footer {
 }
 
 @media (max-width: 600px) {
+
     header,
     footer {
         padding: 2rem 1rem;
